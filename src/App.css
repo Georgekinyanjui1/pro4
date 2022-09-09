@@ -1,38 +1,99 @@
-.App {
+
+.app-cont {
+  margin:0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: rgb(122, 213, 233);
+}
+.nav-cont{
+  background-color: rgb(238, 255, 0);
+  display:flex;
+  text-decoration: underline;
+}
+.nav-but{
+  margin-left: 200px;
+  padding:50px
+}
+.nav-cont>h1{
+  margin-left: 20px;
+}
+.nav-cont>img{
+  height: 100px;
+}
+.nav-cont>h1>span{
+  color:crimson;
+  text-decoration: overline;
+}
+.head-cont{
+  margin-top:50px
+
+   
+  
+}
+.head-cont>h1{
+  text-align: center;
+}
+.head-cont>p{
+  font-size: x-large;
+  margin:10px;
+  background-color:rgb(89, 132, 141);
+}
+
+.sub-head-cont{
+  display:flex;
+  
+}
+
+.child-sub-cont{
+  margin-left: 80px;
+}
+.child-sub-cont>button{
+  pad: 250px;
+}
+.sect-cont{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input{
+  height: 50px;
+  width: 200px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover{
+  background-color: lawngreen;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.nav-but{
+  color: black;
+}
+.nav-but:hover{
+  color: springgreen;
+}
+.quiz{
   color: white;
+  background-color: black;
+  text-align: center;
 }
-
-.App-link {
-  color: #61dafb;
+.foot{
+  background-color: rgb(238, 255, 0);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.foot>h3{
+  text-align: center;
+}
+.footer{
+  display: flex;
+ 
+}
+.footer>div{
+  margin-left: 250px;
+}
+.apple{
+  margin: 300px;
+  font-size: 50px;
+}
+.answer-butt{
+  font-size: 100px;
+}
+.disabled{
+  display: none;
+}
+.abled{
+ display:none;
 }

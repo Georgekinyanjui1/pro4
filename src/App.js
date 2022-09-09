@@ -1,24 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Nav from "./Nav";
+import Head from "./Head";
+import Section from "./Section";
+import Quiz from "./Quiz";
+import Footer from "./Footer";
+import { Route,Routes,BrowserRouter } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Login from "./Login";
 function App() {
+ const [logged,setLogged]= useState(false)
+ const [useremail,setuseremail]=useState("")
+ const [userpassword,setuserpassword]=useState("")
+ const [users,setusers]=useState([])
+ const [ success,setsuccess]=useState(true)
+
+ useEffect(()=>{
+  fetch("http://localhost:9292/users")
+  .then(res=>res.json())
+  .then(data=>setusers(data))
+},[])
+
+ function handlesubmit(e){
+ e.preventDefault()
+
+ users.filter((user)=>{
+  if(user.email ===useremail && user.password===userpassword){
+    setLogged(true)
+    setuseremail("")
+    setuserpassword("")
+  } else{
+   setuseremail("")
+   setuserpassword("")
+   setsuccess(false)
+   e.target.reset()
+  }
+ return true
+  
+  
+ })
+ }
+
+ 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    logged ?
+    <div className="app-cont">
+      <BrowserRouter>
+      <Nav />
+        <Routes>
+          <Route exact path="/" element={<Head />} />
+          <Route exact path="/section" element={<Section />} />
+          <Route exact path="/quiz" element={<Quiz />} />
+        </Routes>
+      </BrowserRouter>
+      <Footer/>
+    </div>: <Login setuseremail={setuseremail} setuserpassword={setuserpassword} handlesubmit={handlesubmit} succcess={success} />
+
+    
   );
 }
 

@@ -23,6 +23,7 @@ const[signup,setsignup]=useState(false)
           placeholder="Email"
           required
         />
+        <div className="coni1">
         <input
           onChange={(e) => {
             setuserpassword(e.target.value);
@@ -32,10 +33,14 @@ const[signup,setsignup]=useState(false)
           id="password"
           placeholder="Password"
           required
-        />
+        /> 
+        </div>
         <button>Login</button>
+        
+        <button className="reg" onClick={()=>{setsignup(true)}}>Register</button>
+       
       </form>
-      <button className="reg" onClick={()=>{setsignup(true)}}>Register</button>
+      
     </>
   );
 }

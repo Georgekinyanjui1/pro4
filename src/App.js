@@ -7,6 +7,7 @@ import Footer from "./Footer";
 import { Route,Routes,BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Login from "./Login";
+import Register from "./Register";
 function App() {
  const [logged,setLogged]= useState(false)
  const [useremail,setuseremail]=useState("")
@@ -53,7 +54,7 @@ function App() {
         </Routes>
       </BrowserRouter>
       <Footer/>
-    </div>: <Login setuseremail={setuseremail} setuserpassword={setuserpassword} handlesubmit={handlesubmit} succcess={success} />
+    </div>: <Login setuseremail={setuseremail} setuserpassword={setuserpassword} handlesubmit={handlesubmit} setLogged={setLogged}/>
 
     
   );

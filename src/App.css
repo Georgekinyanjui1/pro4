@@ -123,3 +123,8 @@ button{
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.login-but{
+  background-color:darkgreen;
+  border: 1px darkgreen;
+  border-radius: 10px;
+}

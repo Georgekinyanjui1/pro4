@@ -35,7 +35,7 @@ const[signup,setsignup]=useState(false)
           required
         /> 
         </div>
-        <button>Login</button>
+        <button className="login-but">Login</button>
         
         <button className="reg" onClick={()=>{setsignup(true)}}>Register</button>
        

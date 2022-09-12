@@ -6,7 +6,11 @@ const[signup,setsignup]=useState(false)
   return (
     signup?<Register setLogged={setLogged}/>:
     <>
+    <h1>Welcome to Light Quote foundation</h1>
       <form onSubmit={handlesubmit}>
+        <h2>Do you have an account?</h2>
+
+
         <h1>Login</h1>
         
         <input 

@@ -28,7 +28,6 @@ function Footer() {
                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3boJZx6A93nnmtLgk-W_pnqRulTxJRJxmNw&usqp=CAU' alt='LinkedIn' height={40}/>
             </div>
         </div>
-        
     </div>
   )
 }

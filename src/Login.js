@@ -32,7 +32,6 @@ const[signup,setsignup]=useState(false)
         <button>Login</button>
       </form>
       <button className="reg" onClick={()=>{setsignup(true)}}>Register</button>
-  
     </>
   );
 }

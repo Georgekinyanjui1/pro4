@@ -1,9 +1,26 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import VersesList from "./VersesList";
 
 function Head() {
-  const [isClicked,setIsClicked]= useState(true)
+  const [isClicked, setIsClicked] = useState(true);
+  const[newverse, setnewverse]=useState("")
+  const[newquote,setnewquote]=useState("")
+  function handlesubmit(e){
+    e.preventDefault()
+    fetch("http://localhost:9292/quotes",
+    {
+      method:"POST",headers:{"content-Type":"application/json"},
+      body:JSON.stringify({
+        verse:newverse,
+        quote:newquote
+      })
 
+    }
+    )
+    setnewverse("")
+    setnewquote("")
+    e.target.reset()
+  }
   return (
     <div className="head-cont">
       <h1>Introduction</h1>
@@ -22,19 +39,34 @@ function Head() {
         destruction. But despite the death and destruction, God has mercy on his
         creatures and begins a process of intervention to save us.
       </p>
-      
+
       <div className="sub-head-cont">
-        <img src="https://i.ytimg.com/vi/fPwf6ZZLXX4/maxresdefault.jpg" alt="img-one" height={500}/>
-      <div className="child-sub-cont">
-       
-        <button className="head-butt" onClick={()=>setIsClicked(!isClicked)}>click to show or hide verses</button>
+        <img
+          src="https://i.ytimg.com/vi/fPwf6ZZLXX4/maxresdefault.jpg"
+          alt="img-one"
+          height={500}
+        />
+        <div className="child-sub-cont">
+          <button
+            className="head-butt"
+            onClick={() => setIsClicked(!isClicked)}
+          >
+            click to show or hide verses
+          </button>
+        </div>
+
+        {isClicked ? <VersesList /> : null}
+        <form onSubmit={handlesubmit}>
+          <label>add a verse here</label>
+          <input type="text" required onChange={(e)=>{setnewverse(e.target.value)}}></input>
+          <label>add a quote here</label>
+          <input type="text" required onChange={(e)=>{setnewquote(e.target.value)}}></input>
+          <input type="submit" value="post"></input>
+        </form>
       </div>
-      
-      {isClicked?<VersesList/>:null}
-        
-      </div>
-      
     </div>
   );
 }
+
 export default Head;
+

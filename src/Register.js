@@ -13,7 +13,6 @@ function handlesubmit(e){
         name:name,
         email:email,
         password:password
-        
       })
     }
     )

@@ -1,15 +1,18 @@
-import react from "react"
+import React, { useState } from "react";
+import Register from "./Register";
 
-
-function Login({setuseremail,setuserpassword,handlesubmit,success}) {
-    return(
-      <>
-  
-        <form onSubmit={handlesubmit}>
+function Login({ setuseremail, setuserpassword, handlesubmit,setLogged  }) {
+const[signup,setsignup]=useState(false)
+  return (
+    signup?<Register setLogged={setLogged}/>:
+    <>
+      <form onSubmit={handlesubmit}>
         <h1>Login</h1>
-        <p className={success?"disabled":"abled"}>Invalid username or password</p>
-        <input
-        onChange={(e)=>{setuseremail(e.target.value)}}
+        
+        <input 
+          onChange={(e) => {
+            setuseremail(e.target.value);
+          }}
           type="email"
           name="email"
           id="email"
@@ -17,21 +20,20 @@ function Login({setuseremail,setuserpassword,handlesubmit,success}) {
           required
         />
         <input
-        onChange={(e)=>{setuserpassword(e.target.value)}}
+          onChange={(e) => {
+            setuserpassword(e.target.value);
+          }}
           type="password"
           name="password"
           id="password"
           placeholder="Password"
           required
-         
         />
-        <button>
-          Login
-        </button>
+        <button>Login</button>
       </form>
+      <button className="reg" onClick={()=>{setsignup(true)}}>Register</button>
+  
     </>
-    )
-     
-    
+  );
 }
-export default Login
+export default Login;

@@ -15,7 +15,6 @@ function Head() {
         verse:newverse,
         quote:newquote
       })
-
     }
     )
     setnewverse("")

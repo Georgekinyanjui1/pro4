@@ -15,7 +15,6 @@ function handlesubmit(e){
         password:password
         
       })
-
     }
     )
     setname("")

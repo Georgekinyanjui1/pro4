@@ -8,7 +8,6 @@ function Section() {
     fetch("https://aqueous-savannah-93824.herokuapp.com/comments")
     .then(res=>res.json())
     .then(data=>setComments(data))
-
   },[])
 function handelInput(e){
   setInput(e.target.value)

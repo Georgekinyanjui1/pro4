@@ -39,7 +39,6 @@ function Head() {
         destruction. But despite the death and destruction, God has mercy on his
         creatures and begins a process of intervention to save us.
       </p>
-
       <div className="sub-head-cont">
         <img
           src="https://i.ytimg.com/vi/fPwf6ZZLXX4/maxresdefault.jpg"

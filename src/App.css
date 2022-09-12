@@ -97,3 +97,25 @@ button:hover{
 .abled{
  display:none;
 }
+form{
+  color: deepskyblue;
+ padding: 300px;
+ background-color: blue;
+ 
+ border-radius: 30px;
+}
+input{
+  width:200px ;
+  height: 40px;
+  border-color: brown;
+  border-radius: 20px;
+}
+button{
+  width: 70px;
+  height: 45px;
+}
+.reg{
+  margin-left: 500px;
+  background-color: forestgreen;
+  font: size 100px;
+}

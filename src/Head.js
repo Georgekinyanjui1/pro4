@@ -41,26 +41,27 @@ function Head() {
       </p>
       <div className="sub-head-cont">
         <img
-          src="https://i.ytimg.com/vi/fPwf6ZZLXX4/maxresdefault.jpg"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaskiE3lKrvGolIQyO15rSYIvN9QXfb0hZqA&usqp=CAU"
           alt="img-one"
           height={500}
         />
         <div className="child-sub-cont">
           <button
-            className="head-butt"
+            className="head-but"
             onClick={() => setIsClicked(!isClicked)}
-          >
-            click to show or hide verses
+          > click to show/hide verses
           </button>
         </div>
 
         {isClicked ? <VersesList /> : null}
-        <form onSubmit={handlesubmit}>
+        <form className="form2" onSubmit={handlesubmit}>
           <label>add a verse here</label>
           <input type="text" required onChange={(e)=>{setnewverse(e.target.value)}}></input>
+          <div className="coni2">
           <label>add a quote here</label>
           <input type="text" required onChange={(e)=>{setnewquote(e.target.value)}}></input>
-          <input type="submit" value="post"></input>
+          </div>
+          <input className="but" type="submit" value="post"></input>
         </form>
       </div>
     </div>

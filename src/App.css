@@ -2,12 +2,13 @@
 .app-cont {
   margin:0;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: rgb(122, 213, 233);
+  background-color: rgb(239, 244, 245);
 }
 .nav-cont{
-  background-color: rgb(238, 255, 0);
+  background-color: rgb(241, 241, 239);
   display:flex;
   text-decoration: underline;
+  border-bottom: 1px black solid;
 }
 .nav-but{
   margin-left: 200px;
@@ -26,16 +27,14 @@
 .head-cont{
   margin-top:50px
 
-   
-  
 }
 .head-cont>h1{
   text-align: center;
 }
 .head-cont>p{
-  font-size: x-large;
+  /* font-size: x-large; */
   margin:10px;
-  background-color:rgb(89, 132, 141);
+  background-color:rgb(238, 244, 245);
 }
 
 .sub-head-cont{
@@ -72,14 +71,13 @@ button:hover{
   text-align: center;
 }
 .foot{
-  background-color: rgb(238, 255, 0);
+  background-color: rgb(253, 251, 251);
 }
 .foot>h3{
   text-align: center;
 }
 .footer{
   display: flex;
- 
 }
 .footer>div{
   margin-left: 250px;
@@ -97,12 +95,13 @@ button:hover{
 .abled{
  display:none;
 }
-form{
+.form1{
   color: deepskyblue;
- padding: 300px;
+ padding: 200px;
+ margin-right: 600px;
+ margin-left: 600px;
  background-color: blue;
- 
- border-radius: 30px;
+ border-radius: 200px;
 }
 input{
   width:200px ;
@@ -110,14 +109,16 @@ input{
   border-color: brown;
   border-radius: 20px;
 }
-button{
+/* button{
   width: 70px;
   height: 45px;
-}
+  color: darkgreen;
+} */
 .reg{
-  margin-left: 500px;
+  margin-left: 200px;
   background-color: forestgreen;
-  font: size 100px;
+  padding: 30px;
+
 }
 .coni1{
   margin-top: 10px;
@@ -127,4 +128,37 @@ button{
   background-color:darkgreen;
   border: 1px darkgreen;
   border-radius: 10px;
+  padding: 20px;
+}
+.welcome{
+  margin-left: 650px;
+}
+.regi{
+  margin: 200px;
+  margin-right: 500px;
+  color: deepskyblue;
+  padding: 150px;
+  background-color: blue;
+  border-radius: 800px;
+}
+.smt{
+  margin-top: 50px;
+  background-color: darkgreen;
+}
+.form2{
+  color: deepskyblue;
+ padding: 150px;
+ background-color: blue;
+ border-radius: 800px;
+}
+.coni2{
+  margin-bottom: 5px;
+}
+.but{
+  background-color: darkgreen;
+}
+.head-but{
+  padding:50px;
+  margin-top: 50px;
+  border-radius: 100px;
 }

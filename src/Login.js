@@ -6,13 +6,10 @@ const[signup,setsignup]=useState(false)
   return (
     signup?<Register setLogged={setLogged}/>:
     <>
-    <h1>Welcome to Light Quote foundation</h1>
-      <form onSubmit={handlesubmit}>
+    <h1 className="welcome">Welcome to Light Quote foundation</h1>
+      <form className="form1" onSubmit={handlesubmit}>
         <h2>Do you have an account?</h2>
-
-
         <h1>Login</h1>
-        
         <input 
           onChange={(e) => {
             setuseremail(e.target.value);
@@ -36,6 +33,8 @@ const[signup,setsignup]=useState(false)
         /> 
         </div>
         <button className="login-but">Login</button>
+
+        <h2>To get an account please register</h2>
         
         <button className="reg" onClick={()=>{setsignup(true)}}>Register</button>
        

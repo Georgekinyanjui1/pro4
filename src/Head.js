@@ -8,7 +8,7 @@ function Head() {
   const[newquote,setnewquote]=useState("")
   function handlesubmit(e){
     e.preventDefault()
-    fetch("http://localhost:9292/quotes",
+    fetch("https://intense-mesa-32821.herokuapp.com/quotes",
     {
       method:"POST",headers:{"content-Type":"application/json"},
       body:JSON.stringify({

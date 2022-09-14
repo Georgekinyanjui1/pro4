@@ -4,7 +4,7 @@ import Verse from './Verse'
 function VersesList() {
     const [verses,setVerses]= useState([])
     useEffect(()=>{
-        fetch("http://localhost:9292/quotes")
+        fetch("https://intense-mesa-32821.herokuapp.com/quotes")
         .then((res)=>res.json())
         .then((data)=>setVerses(data))
     },[])

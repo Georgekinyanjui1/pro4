@@ -16,7 +16,7 @@ function App() {
  const [ success,setsuccess]=useState(true)
 
  useEffect(()=>{
-  fetch("http://localhost:9292/users")
+  fetch("https://intense-mesa-32821.herokuapp.com/users")
   .then(res=>res.json())
   .then(data=>setusers(data))
 },[])

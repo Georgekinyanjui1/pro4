@@ -6,7 +6,7 @@ const[email,setemail]=useState("")
 const[password,setpassword]=useState("")
 function handlesubmit(e){
     e.preventDefault()
-    fetch("http://localhost:9292/users",
+    fetch("https://intense-mesa-32821.herokuapp.com/users",
     {
       method:"POST",headers:{"content-Type":"application/json"},
       body:JSON.stringify({
@@ -34,7 +34,7 @@ function handlesubmit(e){
       </div>
       <div>
       <label>Enter your password </label>
-      <input type="text" onChange={(e)=>{setpassword(e.target.value)}} required/>
+      <input type="password" onChange={(e)=>{setpassword(e.target.value)}} required/>
       </div>
       <input className="smt" type="submit" value="submit"/>
     </form>

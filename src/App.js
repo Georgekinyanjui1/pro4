@@ -41,7 +41,6 @@ function App() {
  })
  }
 
- 
   return (
     logged ?
     <div className="app-cont">

@@ -56,7 +56,6 @@ function App() {
       <Footer/>
     </div>: <Login setuseremail={setuseremail} setuserpassword={setuserpassword} handlesubmit={handlesubmit} setLogged={setLogged}/>
 
-    
   );
 }
 export default App;

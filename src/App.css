@@ -43,13 +43,14 @@
 }
 
 .child-sub-cont{
-  
+
   margin-left: 80px;
 }
 .child-sub-cont>button{
   pad: 250px;
 }
 .sect-cont{
+  
   text-align: center;
 }
 

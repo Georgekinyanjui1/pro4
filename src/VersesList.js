@@ -16,4 +16,5 @@ function VersesList() {
   )
 }
 
+
 export default VersesList

@@ -9,5 +9,4 @@ function Verse({verse}) {
     </div>
   )
 }
-
 export default Verse

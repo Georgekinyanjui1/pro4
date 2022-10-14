@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 
-
 function Quiz() {
 	
   const questions = [

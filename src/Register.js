@@ -1,5 +1,6 @@
 import React,{useState} from "react";
 
+
 function Register({setLogged}) {
     const[name,setname]=useState("")
 const[email,setemail]=useState("")

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import VersesList from "./VersesList";
 
-
 function Head() {
   const [isClicked, setIsClicked] = useState(true);
   const[newverse, setnewverse]=useState("")
